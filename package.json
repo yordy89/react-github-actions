@@ -24,7 +24,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged --config lint-staged.js"
   },
   "eslintConfig": {
     "extends": [
@@ -33,15 +33,6 @@
     ]
   },
   "typescript": "tsc --project tsconfig.json --noEmit",
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint . --max-warnings=0",
-      "react-scripts test --bail --watchAll=false --findRelatedTests --passWithNoTests"
-    ],
-    "*.{js,jsx,ts,tsx,json,css,js}": [
-      "prettier --write"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
