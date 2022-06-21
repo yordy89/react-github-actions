@@ -24,7 +24,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "lint-staged": "lint-staged"
+    "pre-commit": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
